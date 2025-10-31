@@ -19,6 +19,7 @@ public class MoneyManager extends Account implements Reportable {
     private ArrayList<String> transactions = new ArrayList<>();
     private Scanner sc = new Scanner(System.in);
 
+
     /**
      * Menjalankan aplikasi Money Manager.
      * Menyediakan menu interaktif bagi pengguna.
@@ -97,6 +98,51 @@ public class MoneyManager extends Account implements Reportable {
         choice = getSc().nextInt();
         return choice;
     }
+
+   /* *//**
+     * Menyimpan daftar transaksi ke file teks.
+     * File akan dibuat di direktori proyek dengan nama "riwayat_transaksi.txt".
+     *//*
+    private void saveTransactionsToFile() {
+        try {
+            java.io.FileWriter writer = new java.io.FileWriter("riwayat_transaksi.txt");
+            writer.write("=== RIWAYAT TRANSAKSI ===\n");
+            for (String t : getTransactions()) {
+                writer.write(t + "\n");
+            }
+            writer.write("-------------------------\n");
+            writer.write("Saldo Akhir: " + getBalance() + "\n");
+            writer.close();
+            System.out.println("✅ Transaksi berhasil disimpan ke file riwayat_transaksi.txt");
+        } catch (Exception e) {
+            System.out.println("❌ Gagal menyimpan transaksi: " + e.getMessage());
+        }
+    }*/
+
+    /*public void run() {
+    System.out.println("=== Money Manager ===");
+    int choice = 0;
+    while (choice != 5) {
+        System.out.println("\n1. Tambah Pemasukan");
+        System.out.println("2. Tambah Pengeluaran");
+        System.out.println("3. Tampilkan Transaksi");
+        System.out.println("4. Keluar");
+        System.out.println("5. Simpan ke File");
+        System.out.print("Pilih menu: ");
+        choice = sc.nextInt();
+
+        switch (choice) {
+            case 1 -> addIncome();
+            case 2 -> addExpense();
+            case 3 -> showTransaction();
+            case 4 -> System.out.println("Keluar dari program...");
+            case 5 -> saveTransactionsToFile();
+            default -> System.out.println("Pilihan tidak tersedia!");
+        }
+    }
+}
+*/
+
 
 
     public ArrayList<String> getTransactions() {
