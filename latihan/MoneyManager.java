@@ -46,6 +46,7 @@ public class MoneyManager extends Account implements Reportable {
         // done.
     }
 
+    /// koment
 
     /**
      * Menambahkan data pengeluaran.
